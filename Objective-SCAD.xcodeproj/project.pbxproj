@@ -10,6 +10,14 @@
 		007E6573188BB57400C81B03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007E6572188BB57400C81B03 /* Foundation.framework */; };
 		007E6576188BB57400C81B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E6575188BB57400C81B03 /* main.m */; };
 		007E657A188BB57400C81B03 /* Objective_SCAD.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 007E6579188BB57400C81B03 /* Objective_SCAD.1 */; };
+		007E6591188C2CC200C81B03 /* ObjectiveSCAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E6582188C2CC200C81B03 /* ObjectiveSCAD.m */; };
+		007E6592188C2CC200C81B03 /* OSCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E6584188C2CC200C81B03 /* OSCube.m */; };
+		007E6593188C2CC200C81B03 /* OSGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E6586188C2CC200C81B03 /* OSGeometry.m */; };
+		007E6594188C2CC200C81B03 /* OSGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E6588188C2CC200C81B03 /* OSGroup.m */; };
+		007E6595188C2CC200C81B03 /* OSHullGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E658A188C2CC200C81B03 /* OSHullGroup.m */; };
+		007E6596188C2CC200C81B03 /* OSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E658C188C2CC200C81B03 /* OSObject.m */; };
+		007E6597188C2CC200C81B03 /* OSTranslationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E658E188C2CC200C81B03 /* OSTranslationGroup.m */; };
+		007E6598188C2CC200C81B03 /* SpiralSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E6590188C2CC200C81B03 /* SpiralSphere.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +39,22 @@
 		007E6575188BB57400C81B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		007E6578188BB57400C81B03 /* Objective-SCAD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-SCAD-Prefix.pch"; sourceTree = "<group>"; };
 		007E6579188BB57400C81B03 /* Objective_SCAD.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Objective_SCAD.1; sourceTree = "<group>"; };
+		007E6581188C2CC200C81B03 /* ObjectiveSCAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveSCAD.h; sourceTree = "<group>"; };
+		007E6582188C2CC200C81B03 /* ObjectiveSCAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveSCAD.m; sourceTree = "<group>"; };
+		007E6583188C2CC200C81B03 /* OSCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCube.h; sourceTree = "<group>"; };
+		007E6584188C2CC200C81B03 /* OSCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCube.m; sourceTree = "<group>"; };
+		007E6585188C2CC200C81B03 /* OSGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSGeometry.h; sourceTree = "<group>"; };
+		007E6586188C2CC200C81B03 /* OSGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSGeometry.m; sourceTree = "<group>"; };
+		007E6587188C2CC200C81B03 /* OSGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSGroup.h; sourceTree = "<group>"; };
+		007E6588188C2CC200C81B03 /* OSGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSGroup.m; sourceTree = "<group>"; };
+		007E6589188C2CC200C81B03 /* OSHullGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSHullGroup.h; sourceTree = "<group>"; };
+		007E658A188C2CC200C81B03 /* OSHullGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSHullGroup.m; sourceTree = "<group>"; };
+		007E658B188C2CC200C81B03 /* OSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSObject.h; sourceTree = "<group>"; };
+		007E658C188C2CC200C81B03 /* OSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSObject.m; sourceTree = "<group>"; };
+		007E658D188C2CC200C81B03 /* OSTranslationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTranslationGroup.h; sourceTree = "<group>"; };
+		007E658E188C2CC200C81B03 /* OSTranslationGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTranslationGroup.m; sourceTree = "<group>"; };
+		007E658F188C2CC200C81B03 /* SpiralSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpiralSphere.h; sourceTree = "<group>"; };
+		007E6590188C2CC200C81B03 /* SpiralSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpiralSphere.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +97,7 @@
 		007E6574188BB57400C81B03 /* Objective-SCAD */ = {
 			isa = PBXGroup;
 			children = (
+				007E6580188C2CC200C81B03 /* Objective-SCAD */,
 				007E6575188BB57400C81B03 /* main.m */,
 				007E6579188BB57400C81B03 /* Objective_SCAD.1 */,
 				007E6577188BB57400C81B03 /* Supporting Files */,
@@ -86,6 +111,29 @@
 				007E6578188BB57400C81B03 /* Objective-SCAD-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		007E6580188C2CC200C81B03 /* Objective-SCAD */ = {
+			isa = PBXGroup;
+			children = (
+				007E6581188C2CC200C81B03 /* ObjectiveSCAD.h */,
+				007E6582188C2CC200C81B03 /* ObjectiveSCAD.m */,
+				007E6583188C2CC200C81B03 /* OSCube.h */,
+				007E6584188C2CC200C81B03 /* OSCube.m */,
+				007E6585188C2CC200C81B03 /* OSGeometry.h */,
+				007E6586188C2CC200C81B03 /* OSGeometry.m */,
+				007E6587188C2CC200C81B03 /* OSGroup.h */,
+				007E6588188C2CC200C81B03 /* OSGroup.m */,
+				007E6589188C2CC200C81B03 /* OSHullGroup.h */,
+				007E658A188C2CC200C81B03 /* OSHullGroup.m */,
+				007E658B188C2CC200C81B03 /* OSObject.h */,
+				007E658C188C2CC200C81B03 /* OSObject.m */,
+				007E658D188C2CC200C81B03 /* OSTranslationGroup.h */,
+				007E658E188C2CC200C81B03 /* OSTranslationGroup.m */,
+				007E658F188C2CC200C81B03 /* SpiralSphere.h */,
+				007E6590188C2CC200C81B03 /* SpiralSphere.m */,
+			);
+			path = "Objective-SCAD";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007E6598188C2CC200C81B03 /* SpiralSphere.m in Sources */,
+				007E6591188C2CC200C81B03 /* ObjectiveSCAD.m in Sources */,
+				007E6594188C2CC200C81B03 /* OSGroup.m in Sources */,
+				007E6593188C2CC200C81B03 /* OSGeometry.m in Sources */,
 				007E6576188BB57400C81B03 /* main.m in Sources */,
+				007E6595188C2CC200C81B03 /* OSHullGroup.m in Sources */,
+				007E6597188C2CC200C81B03 /* OSTranslationGroup.m in Sources */,
+				007E6592188C2CC200C81B03 /* OSCube.m in Sources */,
+				007E6596188C2CC200C81B03 /* OSObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
