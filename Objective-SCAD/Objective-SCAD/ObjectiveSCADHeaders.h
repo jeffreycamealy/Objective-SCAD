@@ -10,5 +10,8 @@
 #define StrollerHook_ObjectiveSCADHeaders_h
 
 #import "OSCube.h"
+#import "OSSphere.h"
+#import "OSTranslationGroup.h"
+#import "OSHullGroup.h"
 
 #endif

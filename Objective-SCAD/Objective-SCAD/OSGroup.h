@@ -11,6 +11,8 @@
 
 @interface OSGroup : OSObject
 
++ (id)groupWithObjects:(NSArray *)objects;
+
 - (void)addObject:(OSObject *)object;
 - (void)addObjects:(NSArray *)objects;
 

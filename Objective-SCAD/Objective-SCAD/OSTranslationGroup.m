@@ -10,6 +10,15 @@
 
 @implementation OSTranslationGroup
 
+#pragma mark - Public API
+
++ (OSTranslationGroup *)groupWithTranslationVector:(OSVector)translationVector {
+    OSTranslationGroup *translationGroup = [OSTranslationGroup new];
+    translationGroup.translationVector = translationVector;
+    return translationGroup;
+}
+
+
 #pragma mark - Override
 
 - (NSString *)scad {

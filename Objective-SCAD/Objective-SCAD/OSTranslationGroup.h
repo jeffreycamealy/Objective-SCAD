@@ -10,6 +10,8 @@
 
 @interface OSTranslationGroup : OSGroup
 
++ (OSTranslationGroup *)groupWithTranslationVector:(OSVector)translationVector;
+
 @property OSVector translationVector;
 
 @end
