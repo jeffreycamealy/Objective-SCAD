@@ -13,5 +13,6 @@
 #import "OSSphere.h"
 #import "OSTranslationGroup.h"
 #import "OSHullGroup.h"
+#import "OSIntersectionGroup.h"
 
 #endif
