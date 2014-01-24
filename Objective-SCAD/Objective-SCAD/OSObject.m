@@ -15,6 +15,7 @@
 - (id)init {
     if (self = [super init]) {
         _subObjects = [NSMutableArray new];
+        [self buildSubObjects];
     }
     return self;
 }
@@ -34,6 +35,10 @@
 
 - (id)duplicate {
     return nil;
+}
+
+- (void)buildSubObjects {
+    
 }
 
 @end
