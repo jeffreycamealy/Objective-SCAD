@@ -18,5 +18,6 @@
 #import "OSUnionGroup.h"
 #import "OSCylinder.h"
 #import "OSRotationGroup.h"
+#import "OSDifferenceGroup.h"
 
 #endif
