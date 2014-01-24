@@ -17,5 +17,6 @@
 #import "OSIntersectionGroup.h"
 #import "OSUnionGroup.h"
 #import "OSCylinder.h"
+#import "OSRotationGroup.h"
 
 #endif
