@@ -14,5 +14,6 @@
 #import "OSTranslationGroup.h"
 #import "OSHullGroup.h"
 #import "OSIntersectionGroup.h"
+#import "OSUnionGroup.h"
 
 #endif
