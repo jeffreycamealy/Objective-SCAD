@@ -12,7 +12,8 @@
 @interface OSObject : NSObject
 
 - (NSString *)scad;
-@property OSVector translationVector;
-@property OSVector rotationVector;
+@property (nonatomic, readonly) NSMutableArray *transformations;
+
+- (NSString *)addTransformationsToScad:(NSString *(^)())scad;
 
 @end

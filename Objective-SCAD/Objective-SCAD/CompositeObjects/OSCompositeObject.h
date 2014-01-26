@@ -15,6 +15,8 @@ typedef enum {
     OSCTIntersection
 } OSCompositeType;
 
+#warning Make subclasses instead?  It just feels like I'm breaking the rules.  Why do all of these types need to know about one another?  Tisk tisk.
+
 
 @interface OSCompositeObject : OSObject
 

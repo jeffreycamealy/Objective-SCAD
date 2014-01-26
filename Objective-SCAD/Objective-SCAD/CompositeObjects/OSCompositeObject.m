@@ -7,6 +7,7 @@
 //
 
 #import "OSCompositeObject.h"
+#import "EXTScope.h"
 
 @interface OSCompositeObject ()
 @property (nonatomic, readwrite) NSMutableArray *subObjects;
@@ -39,11 +40,17 @@
 #pragma mark - Override
 
 - (NSString *)scad {
-    return difference(^(NSMutableString *string) {
+    @weakify(self);
+    
+    return [self addTransformationsToScad:^NSString *{
+        @strongify(self);
+        
+        NSMutableString *scad = [NSMutableString new];
         for (OSObject *obj in self.subObjects) {
-            [string appendFormat:@"\n%@", [obj scad]];
+            [scad appendFormat:@"\n%@", [obj scad]];
         }
-    });
+        return scad;
+    }];
 }
 
 

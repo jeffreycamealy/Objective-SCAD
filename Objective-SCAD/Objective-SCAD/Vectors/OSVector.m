@@ -10,4 +10,13 @@
 
 @implementation OSVector
 
+#pragma mark - Init Method
+
+- (id)init {
+    if (self = [super init]) {
+        _vectorType = OSVTTranslate;
+    }
+    return self;
+}
+
 @end
