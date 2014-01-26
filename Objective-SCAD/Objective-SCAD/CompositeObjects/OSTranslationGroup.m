@@ -29,12 +29,12 @@
     });
 }
 
-- (id)duplicate {
+- (id)copy {
     OSTranslationGroup *translationGroup = [OSTranslationGroup new];
     translationGroup.translationVector = self.translationVector;
     
     for (OSObject *obj in self.subObjects) {
-        [translationGroup.subObjects addObject:[obj duplicate]];
+        [translationGroup.subObjects addObject:[obj copy]];
     }
     
     return translationGroup;
