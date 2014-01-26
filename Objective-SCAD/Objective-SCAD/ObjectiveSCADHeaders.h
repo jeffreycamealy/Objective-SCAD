@@ -12,12 +12,6 @@
 #import "ObjectiveSCADConstants.h"
 #import "OSCube.h"
 #import "OSSphere.h"
-#import "OSTranslationGroup.h"
-#import "OSHullGroup.h"
-#import "OSIntersectionGroup.h"
-#import "OSUnionGroup.h"
 #import "OSCylinder.h"
-#import "OSRotationGroup.h"
-#import "OSDifferenceGroup.h"
 
 #endif

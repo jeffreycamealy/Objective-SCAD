@@ -8,8 +8,17 @@
 
 #import "OSObject.h"
 
+typedef enum {
+    OSCTUnion = 0,
+    OSCTDifference,
+    OSCTHull,
+    OSCTIntersection
+} OSCompositeType;
+
+
 @interface OSCompositeObject : OSObject
 
 @property (nonatomic, readonly) NSMutableArray *subObjects;
+@property OSCompositeType compositeType; // Defaul OSCTUnion
 
 @end

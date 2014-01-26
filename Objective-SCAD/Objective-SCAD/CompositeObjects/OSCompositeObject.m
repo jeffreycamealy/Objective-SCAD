@@ -15,6 +15,16 @@
 
 @implementation OSCompositeObject
 
+#pragma mark - Init Method
+
+- (id)init {
+    if (self = [super init]) {
+        _compositeType = OSCTUnion;
+    }
+    return self;
+}
+
+
 #pragma mark - Custom Getter
 
 - (NSMutableArray *)subObjects {
@@ -23,6 +33,30 @@
     }
     
     return _subObjects;
+}
+
+
+#pragma mark - Override
+
+- (NSString *)scad {
+    return difference(^(NSMutableString *string) {
+        for (OSObject *obj in self.subObjects) {
+            [string appendFormat:@"\n%@", [obj scad]];
+        }
+    });
+}
+
+
+#pragma mark - Private API
+
+NSString *difference(void(^subScad)(NSMutableString *string)) {
+    NSMutableString *string = [NSMutableString new];
+    
+    [string appendFormat:@"difference() {"];
+    subScad(string);
+    [string appendFormat:@"\n}"];
+    
+    return string;
 }
 
 @end
