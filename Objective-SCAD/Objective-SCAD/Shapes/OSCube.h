@@ -12,9 +12,9 @@
 
 @interface OSCube : OSObject
 
-- (id)initWithSizeVector:(OSVector)sizeVector;
+- (id)initWithSizeVector:(OSVectorTransformation)sizeVector;
 
-@property OSVector sizeVector;
+@property OSVectorTransformation sizeVector;
 @property BOOL centered; // Default: YES
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "OSObject.h"
+#import "OSVectorTransformation.h"
 
 @interface OSObject ()
 @property (nonatomic, readwrite) NSMutableArray *transformations;
@@ -25,9 +26,19 @@
 #pragma mark - Private API
 
 - (NSString *)addTransformationsToScad:(NSString *(^)())scad {
-    for (OSVector *vector in self.transformations) {
-        <#statements#>
-    }
+    return [self addTransformations:[self.transformations mutableCopy] toScad:scad];
+}
+
+- (NSString *)addTransformations:(NSMutableArray *)transformations toScad:(NSString *(^)())scad {
+    if (transformations.count == 0) return scad();
+    
+    OSVectorTransformation *transformation = (OSVectorTransformation *)transformations.firstObject;
+    [transformations removeObjectAtIndex:0];
+    
+    return [self addTransformations:transformations
+                             toScad:^NSString *{
+                                 [transformation transformScad:scad];
+                             }];
 }
 
 

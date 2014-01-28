@@ -8,8 +8,8 @@
 
 #import "OSGeometry.h"
 
-OSVector v(float x, float y, float z) {
-    OSVector v = {x,y,z};
+OSTransformation v(float x, float y, float z) {
+    OSTransformation v = {x,y,z};
     return v;
 }
 

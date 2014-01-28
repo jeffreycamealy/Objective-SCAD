@@ -12,7 +12,7 @@
 
 #pragma mark - Init Method
 
-- (id)initWithSizeVector:(OSVector)sizeVector {
+- (id)initWithSizeVector:(OSVectorTransformation)sizeVector {
     if (self = [super init]) {
         self.sizeVector = sizeVector;
         self.centered = YES;

@@ -11,15 +11,14 @@
 
 #pragma mark - Data Structures
 
-struct OSVector {
+typedef struct {
     CGFloat x;
     CGFloat y;
     CGFloat z;
-};
-typedef struct OSVector OSVector;
+} OSVector;
 
 
 #pragma mark - Functions
 
-OSVector v(float x, float y, float z);
+OSVectorTransformation v(float x, float y, float z);
 NSString *scadBOOLString(BOOL b);

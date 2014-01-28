@@ -10,6 +10,8 @@
 #define StrollerHook_ObjectiveSCADHeaders_h
 
 #import "ObjectiveSCADConstants.h"
+#import "OSGeometry.h"
+#import "OSVectorTransformation.h"
 #import "OSCube.h"
 #import "OSSphere.h"
 #import "OSCylinder.h"
