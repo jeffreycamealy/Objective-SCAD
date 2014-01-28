@@ -8,8 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+// Possible Transformations:
+//
+// Scale
+// Resize
+// Rotate
+// Translate
+// Mirror
+// Multmatrix
+// Color
+
 @interface OSTransformation : NSObject
 
-- (NSString *)transformScad:(NSString *(^)())scad;
+- (NSString *)transformScad:(NSString *)scad;
 
 @end

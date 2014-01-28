@@ -9,11 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "OSGeometry.h"
 
+@class OSTransformation;
+
 @interface OSObject : NSObject
 
 - (NSString *)scad;
-@property (nonatomic, readonly) NSMutableArray *transformations;
 
-- (NSString *)addTransformationsToScad:(NSString *(^)())scad;
+@property (nonatomic, readonly) NSMutableArray *transformations;
+- (void)addTransformation:(OSTransformation *)transformation;
+
+///
+/// Protected.  Only subclasses should call
+///
+- (NSString *)addTransformationsToScad:(NSString *)scad;
 
 @end

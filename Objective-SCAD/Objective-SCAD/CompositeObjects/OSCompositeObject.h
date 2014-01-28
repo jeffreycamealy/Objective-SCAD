@@ -26,4 +26,5 @@ typedef enum {
 @property (nonatomic, readonly) NSMutableArray *subObjects;
 @property OSCompositeType compositeType; // Defaul OSCTUnion
 
+- (void)buildSubObjects;
 @end

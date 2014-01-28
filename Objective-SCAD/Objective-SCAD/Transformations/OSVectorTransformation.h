@@ -13,20 +13,14 @@ typedef enum {
     OSVTTTranslate = 0,
     OSVTTRotate
 } OSVectorTransformationType;
-//Scale
-//Resize
-//Rotate
-//Translate
-//Mirror
-//Multmatrix
-//Color
 
-//#warning Make a Transformation Objects.  Subclasses can be anything from Tranformations Section on wiki
 
 @interface OSVectorTransformation : OSTransformation
 
 @property OSVectorTransformationType type; // Default: OSVTTTranslate;
 @property OSVector vector;
+
++ (id)transformationWithVector:(OSVector)vector type:(OSVectorTransformationType)type;
 
 @end
 

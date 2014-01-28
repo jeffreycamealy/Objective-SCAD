@@ -22,23 +22,27 @@
     return @"";
 }
 
+- (void)addTransformation:(OSTransformation *)transformation {
+    [self.transformations addObject:transformation];
+}
+
 
 #pragma mark - Private API
 
-- (NSString *)addTransformationsToScad:(NSString *(^)())scad {
-    return [self addTransformations:[self.transformations mutableCopy] toScad:scad];
+- (NSString *)addTransformationsToScad:(NSString *)scad {
+    return addTransformationsToScad([self.transformations mutableCopy], scad);
 }
 
-- (NSString *)addTransformations:(NSMutableArray *)transformations toScad:(NSString *(^)())scad {
-    if (transformations.count == 0) return scad();
+NSString *addTransformationsToScad (NSMutableArray *transformations, NSString *scad) {
+    if (transformations.count == 0) return scad;
     
+    // Dequeue
     OSVectorTransformation *transformation = (OSVectorTransformation *)transformations.firstObject;
     [transformations removeObjectAtIndex:0];
     
-    return [self addTransformations:transformations
-                             toScad:^NSString *{
-                                 [transformation transformScad:scad];
-                             }];
+    NSString *plusOneTransformScad = [transformation transformScad:scad];
+    
+    return addTransformationsToScad(transformations, plusOneTransformScad);
 }
 
 

@@ -10,7 +10,7 @@
 
 @implementation OSTransformation
 
-- (NSString *)transformScad:(NSString *(^)())scad {
+- (NSString *)transformScad:(NSString *)scad {
     return @"";
 }
 

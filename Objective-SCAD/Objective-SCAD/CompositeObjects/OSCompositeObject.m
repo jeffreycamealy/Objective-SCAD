@@ -21,15 +21,22 @@
 - (id)init {
     if (self = [super init]) {
         _compositeType = OSCTUnion;
+        [self buildSubObjects];
     }
     return self;
+}
+
+
+#pragma mark - Public API
+
+- (void)buildSubObjects {
 }
 
 
 #pragma mark - Custom Getter
 
 - (NSMutableArray *)subObjects {
-    if (_subObjects) {
+    if (!_subObjects) {
         _subObjects = [NSMutableArray new];
     }
     
@@ -40,17 +47,12 @@
 #pragma mark - Override
 
 - (NSString *)scad {
-    @weakify(self);
+    NSMutableString *scad = [NSMutableString new];
+    for (OSObject *obj in self.subObjects) {
+        [scad appendFormat:@"\n%@", [obj scad]];
+    }
     
-    return [self addTransformationsToScad:^NSString *{
-        @strongify(self);
-        
-        NSMutableString *scad = [NSMutableString new];
-        for (OSObject *obj in self.subObjects) {
-            [scad appendFormat:@"\n%@", [obj scad]];
-        }
-        return scad;
-    }];
+    return [self addTransformationsToScad:scad];
 }
 
 

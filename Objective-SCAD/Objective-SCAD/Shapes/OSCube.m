@@ -12,7 +12,7 @@
 
 #pragma mark - Init Method
 
-- (id)initWithSizeVector:(OSVectorTransformation)sizeVector {
+- (id)initWithSizeVector:(OSVector)sizeVector {
     if (self = [super init]) {
         self.sizeVector = sizeVector;
         self.centered = YES;
@@ -24,8 +24,9 @@
 #pragma mark - Overrides
 
 - (NSString *)scad {
-    return [NSString stringWithFormat:@"cube([%g,%g,%g], center=%@);",
-            self.sizeVector.x, self.sizeVector.y, self.sizeVector.z, scadBOOLString(self.centered)];
+    NSString *scad =[NSString stringWithFormat:@"cube([%g,%g,%g], center=%@);",
+                     self.sizeVector.x, self.sizeVector.y, self.sizeVector.z, scadBOOLString(self.centered)];
+    return [self addTransformationsToScad:scad];
 }
 
 - (id)duplicate {

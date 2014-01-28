@@ -21,14 +21,24 @@
 }
 
 
+#pragma mark - Public API
+
++ (id)transformationWithVector:(OSVector)vector type:(OSVectorTransformationType)type {
+    OSVectorTransformation *vectorTransformation = [OSVectorTransformation new];
+    vectorTransformation.vector = vector;
+    vectorTransformation.type = type;
+    return vectorTransformation;
+}
+
+
 #pragma mark - Override
 
-- (NSString *)transformScad:(NSString *(^)())scad {
+- (NSString *)transformScad:(NSString *)scad {
     NSMutableString *transformedScad = [NSMutableString new];
     
-    [transformedScad appendFormat:@"%@(%g, %g, %g) {\n", [self keyworkForType], self.vector.x, self.vector.y, self.vector.z];
-    [transformedScad appendString:scad()];
-    [transformedScad appendFormat:@"}\n"];
+    [transformedScad appendFormat:@"%@([%g, %g, %g]) {\n", [self keyworkForType], self.vector.x, self.vector.y, self.vector.z];
+    [transformedScad appendFormat:@"%@\n", scad];
+    [transformedScad appendFormat:@"}"];
     
     return transformedScad;
 }
