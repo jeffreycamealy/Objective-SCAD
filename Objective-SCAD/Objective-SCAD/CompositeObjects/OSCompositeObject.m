@@ -52,7 +52,52 @@
         [scad appendFormat:@"\n%@", [obj scad]];
     }
     
-    return [self addTransformationsToScad:scad];
+    NSString *scadWithCompositeType = [self addCompositeTypeToScad:scad];
+    return [self addTransformationsToScad:scadWithCompositeType];
+}
+
+
+#pragma mark - Private API
+
+- (NSString *)addCompositeTypeToScad:(NSString *)scad {
+    NSMutableString *scadWithCompositeType = [NSMutableString new];
+    
+    [scadWithCompositeType appendFormat:@"%@() {\n", [self keywordForCompositeType]];
+    [scadWithCompositeType appendFormat:@"%@\n", scad];
+    [scadWithCompositeType appendFormat:@"}"];
+    
+    return scadWithCompositeType;
+}
+
+
+//typedef enum {
+//    OSCTUnion = 0,
+//    OSCTDifference,
+//    OSCTHull,
+//    OSCTIntersection,
+//    OSCTMinkowski
+//} OSCompositeType;
+
+- (NSString *)keywordForCompositeType {
+    switch (self.compositeType) {
+        case OSCTUnion:
+            return @"union";
+            
+        case OSCTDifference:
+            return @"difference";
+            
+        case OSCTHull:
+            return @"hull";
+            
+        case OSCTIntersection:
+            return @"intersection";
+            
+        case OSCTMinkowski:
+            return @"minkowski";
+            
+        default:
+            break;
+    }
 }
 
 
