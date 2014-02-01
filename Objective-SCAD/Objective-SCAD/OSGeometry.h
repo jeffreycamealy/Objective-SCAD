@@ -8,18 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+@class OSVectorTransformation;
+
 
 #pragma mark - Data Structures
 
-struct OSVector {
+typedef struct {
     CGFloat x;
     CGFloat y;
     CGFloat z;
-};
-typedef struct OSVector OSVector;
+} OSVector;
 
 
 #pragma mark - Functions
 
 OSVector v(float x, float y, float z);
 NSString *scadBOOLString(BOOL b);
+
+
+#pragma mark - Convenience
+
+OSVectorTransformation *rotate(float x, float y, float z);
+OSVectorTransformation *translate(float x, float y, float z);

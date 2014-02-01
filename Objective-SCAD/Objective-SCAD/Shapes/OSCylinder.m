@@ -11,7 +11,8 @@
 @implementation OSCylinder
 
 - (NSString *)scad {
-    return [NSString stringWithFormat:@"cylinder(h = %g, r = %g, center = true);", self.height, self.radius];
+    NSString *scad = [NSString stringWithFormat:@"cylinder(h = %g, r = %g, center = true);", self.height, self.radius];
+    return [self addTransformationsToScad:scad];
 }
 
 @end

@@ -24,8 +24,9 @@
 #pragma mark - Overrides
 
 - (NSString *)scad {
-    return [NSString stringWithFormat:@"cube([%g,%g,%g], center=%@);",
-            self.sizeVector.x, self.sizeVector.y, self.sizeVector.z, scadBOOLString(self.centered)];
+    NSString *scad =[NSString stringWithFormat:@"cube([%g,%g,%g], center=%@);",
+                     self.sizeVector.x, self.sizeVector.y, self.sizeVector.z, scadBOOLString(self.centered)];
+    return [self addTransformationsToScad:scad];
 }
 
 - (id)duplicate {

@@ -23,7 +23,8 @@
 #pragma mark - Override
 
 - (NSString *)scad {
-    return [NSString stringWithFormat:@"sphere(%g);", self.radius];
+    NSString *scad = [NSString stringWithFormat:@"sphere(%g);", self.radius];
+    return [self addTransformationsToScad:scad];
 }
 
 @end
