@@ -14,6 +14,11 @@ OSVector v(float x, float y, float z) {
     return v;
 }
 
+OSPoint pt(float x, float y) {
+    OSPoint pt = {x,y};
+    return pt;
+}
+
 NSString *scadBOOLString(BOOL b) {
     return b ? @"true" : @"false";
 }
