@@ -15,5 +15,7 @@
 #import "OSCube.h"
 #import "OSSphere.h"
 #import "OSCylinder.h"
+#import "ConvenienceMacros.h"
+#import "VTPG_Common.h"
 
 #endif
