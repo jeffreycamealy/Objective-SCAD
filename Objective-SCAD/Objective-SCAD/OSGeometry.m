@@ -27,7 +27,8 @@ NSString *scadBOOLString(BOOL b) {
 #pragma mark - Convenience
 
 OSVectorTransformation *rotate(float x, float y, float z) {
-    OSVectorTransformation *transformation = [OSVectorTransformation transformationWithVector:v(x, y, z) type:OSVTTRotate];
+    OSVector degreeVector = v(radToDeg(x), radToDeg(y), radToDeg(z));
+    OSVectorTransformation *transformation = [OSVectorTransformation transformationWithVector:degreeVector type:OSVTTRotate];
     return transformation;
 }
 
@@ -35,3 +36,12 @@ OSVectorTransformation *translate(float x, float y, float z) {
     OSVectorTransformation *transformation = [OSVectorTransformation transformationWithVector:v(x, y, z) type:OSVTTTranslate];
     return transformation;
 }
+
+OSVectorTransformation *scaleUniform(float x) {
+    OSVectorTransformation *transformation = [OSVectorTransformation transformationWithVector:v(x, x, x) type:OSVTTScale];
+    return transformation;
+}
+
+
+
+

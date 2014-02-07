@@ -51,6 +51,9 @@
         case OSVTTRotate:
             return @"rotate";
             
+        case OSVTTScale:
+            return @"scale";
+            
         default:
             break;
     }

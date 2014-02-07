@@ -10,6 +10,11 @@
 
 @class OSVectorTransformation;
 
+#pragma mark - Macros
+
+#define degToRad(x) x*M_PI/180
+#define radToDeg(x) x*180/M_PI
+
 
 #pragma mark - Data Structures
 
@@ -34,5 +39,39 @@ NSString *scadBOOLString(BOOL b);
 
 #pragma mark - Convenience
 
-OSVectorTransformation *rotate(float x, float y, float z);
+OSVectorTransformation *rotate(float x, float y, float z); // Radians
 OSVectorTransformation *translate(float x, float y, float z);
+OSVectorTransformation *scaleUniform(float x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
