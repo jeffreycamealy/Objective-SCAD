@@ -27,7 +27,7 @@
     NSMutableString *string = [NSMutableString new];
     [string appendFormat:@"rotate_extrude($fn=%i) {\n", self.resolution];
     [string appendString:[self.shape scad]];
-    [string appendFormat:@"}"];
+    [string appendFormat:@"}\n"];
     
     return [self addTransformationsToScad:string];
 }

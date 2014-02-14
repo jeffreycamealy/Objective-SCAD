@@ -38,7 +38,7 @@
     
     [transformedScad appendFormat:@"%@([%g, %g, %g]) {\n", [self keyworkForType], self.vector.x, self.vector.y, self.vector.z];
     [transformedScad appendFormat:@"%@\n", scad];
-    [transformedScad appendFormat:@"}"];
+    [transformedScad appendFormat:@"}\n"];
     
     return transformedScad;
 }
