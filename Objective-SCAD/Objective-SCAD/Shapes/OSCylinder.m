@@ -10,6 +10,16 @@
 
 @implementation OSCylinder
 
+#pragma mark - Init Method
+
+- (id)initWithRadius:(float)radius height:(float)height {
+    if (self = [super init]) {
+        _radius = radius;
+        _height = height;
+    }
+    return self;
+}
+
 - (NSString *)scad {
     NSString *scad = [NSString stringWithFormat:@"cylinder(h = %g, r = %g, center = true);", self.height, self.radius];
     return [self addTransformationsToScad:scad];

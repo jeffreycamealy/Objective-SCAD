@@ -17,5 +17,8 @@
 #import "OSCylinder.h"
 #import "ConvenienceMacros.h"
 #import "VTPG_Common.h"
+#import "OSCircle.h"
+#import "OSRectangle.h"
+#import "OSRotationalExtrusion.h"
 
 #endif

@@ -29,11 +29,17 @@ typedef struct {
     CGFloat y;
 } OSPoint;
 
+typedef struct {
+    CGFloat width;
+    CGFloat heigth;
+} OSSize;
+
 
 #pragma mark - Functions
 
 OSVector v(float x, float y, float z);
 OSPoint pt(float x, float y);
+OSSize sz(float width, float height);
 NSString *scadBOOLString(BOOL b);
 
 

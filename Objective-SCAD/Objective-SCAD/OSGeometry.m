@@ -19,6 +19,11 @@ OSPoint pt(float x, float y) {
     return pt;
 }
 
+OSSize sz(float width, float height) {
+    OSSize sz = {width, height};
+    return sz;
+}
+
 NSString *scadBOOLString(BOOL b) {
     return b ? @"true" : @"false";
 }

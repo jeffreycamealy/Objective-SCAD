@@ -10,6 +10,8 @@
 
 @interface OSCylinder : OSObject
 
+- (id)initWithRadius:(float)radius height:(float)height;
+
 @property float height;
 @property float radius;
 
