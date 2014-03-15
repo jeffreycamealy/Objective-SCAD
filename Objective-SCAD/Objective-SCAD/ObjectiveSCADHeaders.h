@@ -20,5 +20,6 @@
 #import "OSCircle.h"
 #import "OSRectangle.h"
 #import "OSRotationalExtrusion.h"
+#import "OSTaperedCylinder.h"
 
 #endif
