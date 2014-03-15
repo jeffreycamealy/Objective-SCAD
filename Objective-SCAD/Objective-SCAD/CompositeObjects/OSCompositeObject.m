@@ -19,7 +19,15 @@
 #pragma mark - Init Method
 
 - (id)init {
+    return [self initWithSubObjects:nil];
+}
+
+///
+/// Designated initializer
+///
+- (id)initWithSubObjects:(NSArray *)subObjects {
     if (self = [super init]) {
+        [self.subObjects addObjectsFromArray:subObjects];
         _compositeType = OSCTUnion;
         [self buildSubObjects];
     }
