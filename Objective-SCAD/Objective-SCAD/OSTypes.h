@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+ * OSColor
+ * - All values are between 0 and 1.
+ */
 typedef struct {
     CGFloat red;
     CGFloat green;
@@ -18,4 +21,5 @@ typedef struct {
 
 OSColor color(float red, float green, float blue, float alpha);
 
+// BOOL String
 NSString *scadBOOLString(BOOL b);

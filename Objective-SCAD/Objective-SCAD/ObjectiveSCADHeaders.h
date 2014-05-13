@@ -22,5 +22,6 @@
 #import "OSRotationalExtrusion.h"
 #import "OSTaperedCylinder.h"
 #import "OSTypes.h"
+#import "OSColorTransformation.h"
 
 #endif

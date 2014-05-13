@@ -7,6 +7,7 @@
 //
 
 #import "OSCube.h"
+#import "OSTypes.h"
 
 @implementation OSCube
 
