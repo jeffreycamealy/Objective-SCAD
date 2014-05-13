@@ -11,6 +11,7 @@
 @interface OSSphere : OSObject
 
 - (id)initWithRadius:(float)radius;
+- (id)initWithDiameter:(float)diameter;
 
 @property float radius;
 

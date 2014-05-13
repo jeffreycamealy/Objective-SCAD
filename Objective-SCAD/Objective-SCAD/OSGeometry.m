@@ -24,10 +24,6 @@ OSSize sz(float width, float height) {
     return sz;
 }
 
-NSString *scadBOOLString(BOOL b) {
-    return b ? @"true" : @"false";
-}
-
 
 #pragma mark - Convenience
 

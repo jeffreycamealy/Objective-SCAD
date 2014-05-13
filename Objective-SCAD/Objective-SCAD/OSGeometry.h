@@ -40,7 +40,6 @@ typedef struct {
 OSVector v(float x, float y, float z);
 OSPoint pt(float x, float y);
 OSSize sz(float width, float height);
-NSString *scadBOOLString(BOOL b);
 
 
 #pragma mark - Convenience

@@ -12,6 +12,10 @@
 
 #pragma mark - Init Method
 
+- (id)initWithDiameter:(float)diameter height:(float)height {
+    return [self initWithRadius:diameter/2.0 height:height];
+}
+
 - (id)initWithRadius:(float)radius height:(float)height {
     if (self = [super init]) {
         _radius = radius;

@@ -31,17 +31,7 @@
 }
 
 
-#pragma mark - Override
-
-- (NSString *)transformScad:(NSString *)scad {
-    NSMutableString *transformedScad = [NSMutableString new];
-    
-    [transformedScad appendFormat:@"%@([%g, %g, %g]) {\n", [self keyworkForType], self.vector.x, self.vector.y, self.vector.z];
-    [transformedScad appendFormat:@"%@\n", scad];
-    [transformedScad appendFormat:@"}\n"];
-    
-    return transformedScad;
-}
+#pragma mark - Private API
 
 - (NSString *)keyworkForType {
     switch (self.type) {
@@ -57,6 +47,19 @@
         default:
             break;
     }
+}
+
+
+#pragma mark - Override
+
+- (NSString *)transformScad:(NSString *)scad {
+    NSMutableString *transformedScad = [NSMutableString new];
+    
+    [transformedScad appendFormat:@"%@([%g, %g, %g]) {\n", [self keyworkForType], self.vector.x, self.vector.y, self.vector.z];
+    [transformedScad appendFormat:@"%@\n", scad];
+    [transformedScad appendFormat:@"}\n"];
+    
+    return transformedScad;
 }
 
 @end

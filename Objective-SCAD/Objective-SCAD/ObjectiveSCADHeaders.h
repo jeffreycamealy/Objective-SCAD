@@ -21,5 +21,6 @@
 #import "OSRectangle.h"
 #import "OSRotationalExtrusion.h"
 #import "OSTaperedCylinder.h"
+#import "OSTypes.h"
 
 #endif
