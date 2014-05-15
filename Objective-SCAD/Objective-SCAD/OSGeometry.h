@@ -47,6 +47,7 @@ OSSize sz(float width, float height);
 OSVectorTransformation *rotate(float x, float y, float z); // Radians
 OSVectorTransformation *translate(float x, float y, float z);
 OSVectorTransformation *scaleUniform(float x);
+OSVectorTransformation *mirror(float x, float y, float z);
 
 
 

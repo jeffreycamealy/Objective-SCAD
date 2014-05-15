@@ -12,7 +12,8 @@
 typedef enum {
     OSVTTTranslate = 0,
     OSVTTRotate,
-    OSVTTScale
+    OSVTTScale,
+    OSVTTMirror
 } OSVectorTransformationType;
 
 

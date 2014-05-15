@@ -44,6 +44,9 @@
         case OSVTTScale:
             return @"scale";
             
+        case OSVTTMirror:
+            return @"mirror";
+            
         default:
             break;
     }
