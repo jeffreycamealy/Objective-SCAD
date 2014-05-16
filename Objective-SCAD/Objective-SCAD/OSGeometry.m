@@ -43,6 +43,11 @@ OSVectorTransformation *scaleUniform(float x) {
     return transformation;
 }
 
+OSVectorTransformation *scale(float x, float y, float z) {
+    OSVectorTransformation *transformation = [OSVectorTransformation transformationWithVector:v(x, y, z) type:OSVTTScale];
+    return transformation;
+}
+
 OSVectorTransformation *mirror(float x, float y, float z) {
     OSVectorTransformation *transformation = [OSVectorTransformation transformationWithVector:v(x, y, z) type:OSVTTMirror];
     return transformation;
