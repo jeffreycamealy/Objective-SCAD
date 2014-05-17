@@ -20,6 +20,7 @@ typedef struct {
 } OSColor;
 
 OSColor color(float red, float green, float blue, float alpha);
+OSColor redColor();
 
 // BOOL String
 NSString *scadBOOLString(BOOL b);

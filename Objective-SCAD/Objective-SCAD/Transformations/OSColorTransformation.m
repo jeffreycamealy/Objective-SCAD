@@ -10,6 +10,8 @@
 
 @implementation OSColorTransformation
 
+#pragma mark - Public
+
 + (id)transformationWithColor:(OSColor)color {
     OSColorTransformation *transformation = [OSColorTransformation new];
     transformation.color = color;

@@ -13,6 +13,10 @@ OSColor color(float red, float green, float blue, float alpha) {
     return color;
 }
 
+OSColor redColor() {
+    return color(1, 0, 0, 1);
+}
+
 
 NSString *scadBOOLString(BOOL b) {
     return b ? @"true" : @"false";
