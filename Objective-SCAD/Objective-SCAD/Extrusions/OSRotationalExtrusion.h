@@ -12,7 +12,8 @@
 
 @interface OSRotationalExtrusion : OSObject
 
-- (id)initWith2DShape:(id<OS2DShape>)shape resolution:(int)resolution;
+//- (id)initWith2DShape:(id<OS2DShape>)shape resolution:(int)resolution;
+- (id)initWith2DShape:(OSObject *)shape resolution:(int)resolution;
 
 @property OSObject *shape;
 @property int resolution;

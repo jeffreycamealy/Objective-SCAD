@@ -12,7 +12,7 @@
 
 #pragma mark - Init Method
 
-- (id)initWith2DShape:(id<OS2DShape>)shape resolution:(int)resolution {
+- (id)initWith2DShape:(OSObject *)shape resolution:(int)resolution {
     if (self = [super init]) {
         _shape = (id)shape;
         _resolution = resolution;
